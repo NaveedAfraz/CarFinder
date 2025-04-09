@@ -9,7 +9,7 @@ import FilterSection from "./components/FilterSection";
 import CarCard from "./components/CarCard";
 import CarDetail from "./components/CarDetail";
 import Pagination from "./components/Pagination";
-import WishlistPanel from "./components/WishlistPanel";
+import WishlistPanel from "./components/WishListPanel";
 import useLocalStorage from "./hooks/useLocalStorage";
 import { fetchCars, fetchCarById } from "./services/api";
 
