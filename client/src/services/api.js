@@ -49,7 +49,6 @@ export const fetchCarById = async (carId) => {
     throw error;
   }
 };
-
 export const mockCars = [
   {
     id: 1,
@@ -60,7 +59,7 @@ export const mockCars = [
     fuelType: "Hybrid",
     seatingCapacity: 5,
     mileage: "32 mpg",
-    image: "https://via.placeholder.com/300x200?text=Toyota+Camry",
+    image: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
     features: ["Backup Camera", "Bluetooth", "Navigation", "Sunroof"],
   },
   {
@@ -72,7 +71,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 5,
     mileage: "35 mpg",
-    image: "https://via.placeholder.com/300x200?text=Honda+Civic",
+    image: "https://images.pexels.com/photos/1719647/pexels-photo-1719647.jpeg",
     features: ["Backup Camera", "Bluetooth", "Apple CarPlay"],
   },
   {
@@ -84,7 +83,7 @@ export const mockCars = [
     fuelType: "Electric",
     seatingCapacity: 5,
     mileage: "358 miles (range)",
-    image: "https://via.placeholder.com/300x200?text=Tesla+Model+3",
+    image: "https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg",
     features: ["Autopilot", "Navigation", "Premium Sound System"],
   },
   {
@@ -96,7 +95,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 6,
     mileage: "24 mpg",
-    image: "https://via.placeholder.com/300x200?text=Ford+F-150",
+    image: "https://images.pexels.com/photos/13861/IMG_3496bfree.jpg",
     features: ["Backup Camera", "Touchscreen", "Trailer Hitch"],
   },
   {
@@ -108,7 +107,7 @@ export const mockCars = [
     fuelType: "Hybrid",
     seatingCapacity: 5,
     mileage: "30 mpg",
-    image: "https://via.placeholder.com/300x200?text=BMW+X5",
+    image: "https://images.pexels.com/photos/100656/pexels-photo-100656.jpeg",
     features: [
       "Leather Seats",
       "Navigation",
@@ -125,7 +124,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 5,
     mileage: "28 mpg",
-    image: "https://via.placeholder.com/300x200?text=Mercedes+E-Class",
+    image: "https://images.pexels.com/photos/3786091/pexels-photo-3786091.jpeg",
     features: [
       "Leather Seats",
       "Navigation",
@@ -142,7 +141,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 8,
     mileage: "21 mpg",
-    image: "https://via.placeholder.com/300x200?text=Chevrolet+Tahoe",
+    image: "https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg",
     features: ["Third Row Seating", "Navigation", "Backup Camera"],
   },
   {
@@ -154,7 +153,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 5,
     mileage: "33 mpg",
-    image: "https://via.placeholder.com/300x200?text=Volkswagen+Golf",
+    image: "https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg",
     features: ["Bluetooth", "Backup Camera", "Touchscreen"],
   },
   {
@@ -166,7 +165,7 @@ export const mockCars = [
     fuelType: "Hybrid",
     seatingCapacity: 5,
     mileage: "38 mpg",
-    image: "https://via.placeholder.com/300x200?text=Hyundai+Tucson",
+    image: "https://images.pexels.com/photos/6794815/pexels-photo-6794815.jpeg",
     features: ["Apple CarPlay", "Android Auto", "Backup Camera"],
   },
   {
@@ -178,7 +177,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 5,
     mileage: "30 mpg",
-    image: "https://via.placeholder.com/300x200?text=Nissan+Rogue",
+    image: "https://images.pexels.com/photos/9553929/pexels-photo-9553929.jpeg",
     features: ["Bluetooth", "Backup Camera", "Navigation"],
   },
   {
@@ -190,7 +189,7 @@ export const mockCars = [
     fuelType: "Hybrid",
     seatingCapacity: 5,
     mileage: "29 mpg",
-    image: "https://via.placeholder.com/300x200?text=Audi+Q5",
+    image: "https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg",
     features: ["Leather Seats", "Navigation", "Premium Sound System"],
   },
   {
@@ -202,7 +201,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 8,
     mileage: "26 mpg",
-    image: "https://via.placeholder.com/300x200?text=Kia+Telluride",
+    image: "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg",
     features: ["Third Row Seating", "Backup Camera", "Apple CarPlay"],
   },
   {
@@ -214,7 +213,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 5,
     mileage: "33 mpg",
-    image: "https://via.placeholder.com/300x200?text=Subaru+Outback",
+    image: "https://images.pexels.com/photos/3874337/pexels-photo-3874337.jpeg",
     features: ["All-Wheel Drive", "Backup Camera", "Apple CarPlay"],
   },
   {
@@ -226,7 +225,7 @@ export const mockCars = [
     fuelType: "Hybrid",
     seatingCapacity: 5,
     mileage: "31 mpg",
-    image: "https://via.placeholder.com/300x200?text=Lexus+RX",
+    image: "https://images.pexels.com/photos/6794815/pexels-photo-6794815.jpeg",
     features: ["Leather Seats", "Navigation", "Premium Sound System"],
   },
   {
@@ -238,7 +237,7 @@ export const mockCars = [
     fuelType: "Gasoline",
     seatingCapacity: 5,
     mileage: "30 mpg",
-    image: "https://via.placeholder.com/300x200?text=Mazda+CX-5",
+    image: "https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg",
     features: ["Leather Seats", "Backup Camera", "Bluetooth"],
   },
 ];
