@@ -2,16 +2,25 @@ import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { Search } from "lucide-react";
 
 const FilterSection = ({ onFilterChange, darkMode }) => {
-  const [filters, setFilters] = useState({
-    brand: "",
-    minPrice: "",
-    maxPrice: "",
-    fuelType: "",
-    seatingCapacity: "",
-    sortBy: "",
+  const [filters, setFilters] = useState(() => {
+    const savedFilters = localStorage.getItem("carFinderFilters");
+    const parsedFilters = savedFilters
+      ? JSON.parse(savedFilters)
+      : {
+          brand: "",
+          minPrice: "",
+          maxPrice: "",
+          fuelType: "",
+          seatingCapacity: "",
+          sortBy: "",
+        };
+    return parsedFilters;
   });
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(() => {
+    const savedFilters = localStorage.getItem("carFinderFilters");
+    return savedFilters ? JSON.parse(savedFilters).searchTerm || "" : "";
+  });
 
   // Memoize static data
   const staticData = useMemo(
@@ -62,11 +71,12 @@ const FilterSection = ({ onFilterChange, darkMode }) => {
       fuelType: "",
       seatingCapacity: "",
       sortBy: "",
+      searchTerm: "",
     };
     setFilters(emptyFilters);
     setSearchTerm("");
     localStorage.removeItem("carFinderFilters");
-    onFilterChange({ ...emptyFilters, searchTerm: "" });
+    onFilterChange(emptyFilters);
   }, [onFilterChange]);
 
   const bgClass = darkMode

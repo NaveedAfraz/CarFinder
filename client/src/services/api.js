@@ -12,6 +12,13 @@ export const fetchCars = async (filters, page = 1, limit = 10) => {
           car.seatingCapacity < filters.seatingCapacity
         )
           return false;
+        if (
+          filters.searchTerm &&
+          !`${car.brand} ${car.model} ${car.year}`
+            .toLowerCase()
+            .includes(filters.searchTerm.toLowerCase())
+        )
+          return false;
         return true;
       })
       .sort((a, b) => {
@@ -29,7 +36,6 @@ export const fetchCars = async (filters, page = 1, limit = 10) => {
 
 export const fetchCarById = async (carId) => {
   try {
-     
     // const response = await fetch(`${API_BASE_URL}/cars/${carId}`);
     // if (!response.ok) throw new Error('Failed to fetch car details');
     // const data = await response.json();

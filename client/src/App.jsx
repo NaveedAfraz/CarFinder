@@ -24,7 +24,6 @@ const AppWrapper = () => (
 function App() {
   const [filters, setFilters] = useState(() => {
     const savedFilters = localStorage.getItem("carFinderFilters");
-    // console.log('Initial filters:', savedFilters ? JSON.parse(savedFilters) : 'default filters');
     return savedFilters
       ? JSON.parse(savedFilters)
       : {
@@ -91,11 +90,15 @@ function App() {
   }, [wishlist]);
 
   const handleFilterChange = useCallback((newFilters) => {
-    // console.log('Filter change:', newFilters);
     setFilters(newFilters);
     setCurrentPage(1);
     localStorage.setItem("carFinderFilters", JSON.stringify(newFilters));
+    queryClient.invalidateQueries(["cars"]);
   }, []);
+
+  useEffect(() => {
+    queryClient.invalidateQueries(["cars"]);
+  }, [filters]);
 
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
